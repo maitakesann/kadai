@@ -22,51 +22,18 @@
   	  </thead>
 
   	  <tbody>
+      <% @books.each do |book| %>
+  	    <tr>
+  	      <td><%= link_to book.title, books_path(book) %></td>
+  	      <td><%= link_to book.body, books_path(book) %></td>
+  	      <td><a class="" href="books/:id">show</a></td>
+  	      <td><a class="" href="books/new">edit</a></td>
+  	      <td>Destroy</td>
+  	    </tr>
 
-  	    <tr>
-  	      <td>トラブル知らずのシステム設定</td>
-  	      <td>システム設計の要点を図解で説明してくれます</td>
-  	      <td>show</td>
-  	      <td>edit</td>
-  	      <td>Destroy</td>
-  	    </tr>
-  	    <tr>
-  	      <td>楽しいRuby</td>
-  	      <td>Rubyの入門におすすめです</td>
-  	      <td>show</td>
-  	      <td>edit</d>
-  	      <td>Destroy</td>
-  	    </tr>
-  	    <tr>
-  	      <td>入門Git</td>
-  	      <td>gitについての基本操作から内部構造まで解説してくれます</td>
-  	      <td>show</td>
-  	      <td>edit</td>
-  	      <td>Destroy</td>
-  	    </tr>
-  	    <tr>
-  	      <td>アルゴリズム図鑑</td>
-  	      <td>アルゴリズムについてカラーイラストでしっかり解説してくれます</td>
-  	      <td>show</td>
-  	      <td>edit</td>
-  	      <td>Destroy</td>
-  	    </tr>
-  	    <tr>
-  	      <td>達人プログラマー</td>
-  	      <td>プログラマ入門者は必読！</td>
-  	      <td>show</td>
-  	      <td>edit</td>
-  	      <td>Destroy</td>
-  	    </tr>
-  	    <tr>
-  	      <td>データベース実践入門</td>
-  	      <td>効率的なSQL文を教えてくれます</td>
-  	      <td>show</td>
-  	      <td>edit</td>
-  	      <td>Destroy</td>
-
-  	    </tr>
   	  </tbody>
+
+      <%end%>
 
   	</table>
   	<h2>New book</h2>
@@ -79,7 +46,7 @@
 
   	  <div class="field">
   	    <label for="book_title">本のタイトル</label>
-  	    <input tupe="text" namme="book[title]" id="book_title">
+  	    <input type="text" namme="book[title]" id="book_title">
 
   	  </div>
 
