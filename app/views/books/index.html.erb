@@ -30,7 +30,8 @@
   	      <%= link_to "show", book_path(book.id) %>
   	      </td>
   	      <td><a class="" href="books/new">edit</a></td>
-  	      <td>Destroy</td>
+  	      <td><%= link_to "Destroy", book_path(book), method: :delete %></td>
+  	                         
   	    </tr>
       <%end%>    
   	  </tbody>
@@ -38,21 +39,19 @@
   	</table>
   	
   	<h1>New Books</h1>
-     <%= form_with model:@book,local:true do |f| %>
+    <%= form_with model:@book,local:true do |f| %>
 
-    <div class="field">
-     <h4>Title</h4>
-     <%= f.text_field :title %>
-     </div>
-    <div class="field">
-    <h4>Body</h4>
-    <%= f.text_area :body %>
-    </div>
-    <div class="actions">
-    <%= f.submit 'CreateBook' %>
-    </div>
-
-
+      <div class="field">
+       <h4>Title</h4>
+       <%= f.text_field :title %>
+       </div>
+      <div class="field">
+      <h4>Body</h4>
+      <%= f.text_area :body %>
+      </div>
+      <div class="actions">
+      <%= f.submit 'CreateBook' %>
+      </div>
     <%end%>
 
 
