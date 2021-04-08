@@ -10,9 +10,13 @@
   </head>
   <body>
     <p>Book was successfully created.</p>
-    <p><strong>Title:</strong></p>
+    <p class="show-title"><strong>Title:</strong>
     <%= @book.title %>
-    <p><strong>Body:</strong></p>
+    </p>
+    <p class="show-title"><strong>Body:</strong>
     <%= @book.body %>
-
+    </p>
+    
+    <%= link_to "Edit", edit_book_path(@book) %>
+    <%= link_to "Back", books_path(@book) %>
   </body>
