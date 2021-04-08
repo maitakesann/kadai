@@ -30,38 +30,29 @@
   	      <td><a class="" href="books/new">edit</a></td>
   	      <td>Destroy</td>
   	    </tr>
-
+      <%end%>    
   	  </tbody>
 
-      <%end%>
-
   	</table>
-  	<h2>New book</h2>
+  	
+  	<h1>New Books</h1>
+     <%= form_with model:@book,local:true do |f| %>
 
-  	<form class="new_book" id="new_book" action="/books" accept-charset="UTF-8" method="post">
-  	  <input name="utf8" type="hidden" value="✓">
-  	  <!--この✔何??-->
-  	  <input type="hidden" name="authenticity_token" value="">
-  	  <!--value未記載-->
-
-  	  <div class="field">
-  	    <label for="book_title">本のタイトル</label>
-  	    <input type="text" namme="book[title]" id="book_title">
-
-  	  </div>
-
-  	  <div class="field">
-  	    <label for="book_body">感想</label>
-  	    <textarea class="booko_body" name="book[body]" id="book_body"></textarea>
-  	  </div>
-
-  	  <div class="actions">
-  	    <input type="submit" name="commit" value="Create Book" data-disable-with="Create Book">
-  	    <!--data-disable-with？？？-->
-  	  </div>
+    <div class="field">
+     <h4>Title</h4>
+     <%= f.text_field :title %>
+     </div>
+    <div class="field">
+    <h4>Body</h4>
+    <%= f.text_area :body %>
+    </div>
+    <div class="actions">
+    <%= f.submit 'CreateBook' %>
+    </div>
 
 
-  	</form>
+    <%end%>
+
 
 
   </body>
