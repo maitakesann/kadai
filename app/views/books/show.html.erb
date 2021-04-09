@@ -9,7 +9,7 @@
 
   </head>
   <body>
-    <p>Book was successfully created.</p>
+    <%= flash[:notice] %>
     <p class="show-title"><strong>Title:</strong>
     <%= @book.title %>
     </p>
@@ -17,6 +17,7 @@
     <%= @book.body %>
     </p>
     
-    <%= link_to "Edit", edit_book_path(@book) %>
+    <%= link_to "Edit", edit_book_path(@book) %> |
+    
     <%= link_to "Back", books_path(@book) %>
   </body>
