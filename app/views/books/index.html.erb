@@ -38,7 +38,7 @@
 
   	</table>
   	
-  	<h1>New Books</h1>
+  	<h1>New Book</h1>
   	 <% if @book.errors.any? %>
        <h3>入力した内容にエラーが<%= @book.errors.count %>件あります</h3>
          <% @book.errors.full_messages.each do |message| %>
@@ -56,7 +56,7 @@
       <%= f.text_area :body %>
       </div>
       <div class="actions">
-      <%= f.submit 'CreateBook' %>
+        <%= f.submit  'Create Book' , class: "btn" %>
       </div>
     <%end%>
 

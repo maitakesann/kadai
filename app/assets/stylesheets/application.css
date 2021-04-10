@@ -112,6 +112,15 @@ label {
 
 .actions {
     margin-bottom: 10px;
+    border-radius: 9px;
+}
+
+.btn{
+    border-radius: 2px;
+    /*box-sizing: border-box;*/
+    padding: 1px 6px;
+    /*border-width: 2px;*/
+    /*border-style: outset;*/
 }
 
 .show-title{
