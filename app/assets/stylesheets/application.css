@@ -124,6 +124,17 @@ label {
 }
 
 .show-title{
-    margin-bottom: 10px;
+    margin: 33px;
     
+}
+
+.error_box{
+    border:solid;
+    border-color: red;
+}
+
+/*show.index*/
+.notice{
+    color: green;
+    margin:30px;
 }
